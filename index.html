@@ -169,7 +169,7 @@ async function doTranslate(){
     typewrite(outEl,data.translated);
     document.getElementById('out-card').classList.add('lit');
     document.getElementById('bq').style.display='block';
-    document.getElementById('out-note').textContent='Llama 3.1 · Workers AI';
+    document.getElementById('out-note').textContent = data.model || 'Workers AI';
     addHist(text,data.translated);
   }catch(e){
     outEl.className='yoda-text empty';outEl.textContent=e.message;showToast(e.message);
