@@ -77,7 +77,7 @@ footer span{color:var(--green)}
 <div id="app">
   <div class="top-bar">
     <div class="top-logo"><div class="orb"></div><div class="logo-name">Yoda Speak</div></div>
-    <div class="model-tag">Llama 3.1 · Workers AI</div>
+    <div class="model-tag" id="model-tag">Workers AI</div>
   </div>
   <div class="title-block">
     <div class="eyebrow">Galactic Translation Terminal</div>
@@ -170,6 +170,7 @@ async function doTranslate(){
     document.getElementById('out-card').classList.add('lit');
     document.getElementById('bq').style.display='block';
     document.getElementById('out-note').textContent = data.model || 'Workers AI';
+    document.getElementById('model-tag').textContent = (data.model || 'Workers AI') + ' · Workers AI';
     addHist(text,data.translated);
   }catch(e){
     outEl.className='yoda-text empty';outEl.textContent=e.message;showToast(e.message);
