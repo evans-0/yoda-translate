@@ -1,0 +1,7 @@
+name = "yoda-worker"
+main = "worker.js"
+compatibility_date = "2026-05-17"
+
+[[kv_namespaces]]
+binding = "RATE_LIMIT"
+id = "08c8e0a1ca4d4ec2bab0ee1f76371054"
