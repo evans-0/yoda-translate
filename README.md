@@ -1,8 +1,7 @@
 # 🌌 Yoda Speak — Galactic Translation Terminal
-
 > *"Type your words. Translated, they shall be."*
 
-A Star Wars-themed translator that converts any text into Yoda's iconic speech pattern. Powered by **Llama 3.1** via Cloudflare Workers AI — no external API keys needed.
+A Star Wars-themed translator that converts any text into Yoda's iconic speech pattern. Powered by **Llama 4 Scout** via Cloudflare Workers AI — no external API keys needed.
 
 🔗 **Live demo:** [yoda-translate.pages.dev](https://yoda-translate.pages.dev)
 
@@ -10,7 +9,7 @@ A Star Wars-themed translator that converts any text into Yoda's iconic speech p
 
 ## ✨ Features
 
-- 🤖 AI-powered Yoda speech translation using Llama 3.1
+- 🤖 AI-powered Yoda speech translation using Llama 4 Scout
 - ⚡ Serverless backend via Cloudflare Workers
 - 🛡️ Per-IP rate limiting with Cloudflare KV
 - 📜 Recent translations history (session-based)
@@ -29,7 +28,7 @@ Browser (Cloudflare Pages)
         ▼
 Cloudflare Worker  ←── KV (rate limiting)
         │
-        │  env.AI.run(llama-3.1-8b-instruct)
+        │  env.AI.run(llama-4-scout-17b-16e-instruct)
         ▼
 Cloudflare Workers AI
 ```
@@ -62,6 +61,7 @@ Cloudflare Workers AI
 |------|-------------|
 | `index.html` | Frontend — single-file UI with starfield, input, and output |
 | `worker.js` | Cloudflare Worker — rate limiting + Workers AI call |
+| `wrangler.toml` | Wrangler config — for Git-connected auto-deploys |
 
 ---
 
@@ -75,7 +75,7 @@ Cloudflare Workers AI
 
 - **Frontend:** Vanilla HTML/CSS/JS, hosted on Cloudflare Pages
 - **Backend:** Cloudflare Workers (serverless)
-- **AI:** Llama 3.1 8B Instruct via Cloudflare Workers AI
+- **AI:** Llama 4 Scout (17B) via Cloudflare Workers AI
 - **Storage:** Cloudflare KV (rate limiting)
 
 ---
