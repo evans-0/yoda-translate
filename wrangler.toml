@@ -1,6 +1,16 @@
 name = "yoda-worker"
 main = "worker.js"
 compatibility_date = "2026-05-17"
+preview_urls = false
+
+[ai]
+binding = "AI"
+
+[observability]
+enabled = true
+
+  [observability.logs]
+  enabled = true
 
 [[kv_namespaces]]
 binding = "RATE_LIMIT"
