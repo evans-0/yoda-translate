@@ -98,7 +98,7 @@ Text: ${text.trim()}`;
 
     // ── Call Workers AI ──
     try {
-      const aiRes = await env.AI.run('@cf/meta/llama-3.1-8b-instruct', {
+      const aiRes = await env.AI.run('@cf/meta/llama-4-scout-17b-16e-instruct', {
         messages: [
           {
             role: 'system',
